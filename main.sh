@@ -3,7 +3,7 @@
 archive_file() {
     local file=$1
     local dir=$2
-    local filename=$(basename "$file") # Имя файла без пути
+    local filename=$(basename "$file")
     tar -cf "$dir/$filename.tar" -C "$dir" "$filename"
     echo "Файл $filename архивирован в $filename.tar"
 }
